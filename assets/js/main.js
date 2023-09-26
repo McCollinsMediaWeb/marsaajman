@@ -74,8 +74,10 @@ $(function(){
 		jQuery("body").toggleClass("ActiveForm");
 	});
 	
-
- 	jQuery('.image-item img').css('height', (windowHeight)+'px');
+	if (jQuery(window).width() > 1000) {
+		jQuery('.image-item img').css('height', (windowHeight)+'px');
+	}
+ 	
 	 jQuery('.image-item img').css('width', (windowWidth)+'px');
 	 jQuery('.heightFull').css('height', (windowHeight)+'px');
 	 jQuery('.widthFull').css('width', (windowWidth)+'px');
@@ -134,4 +136,15 @@ $(function(){
         .fadeIn(400);
     }
 	 
+	$(document).on('click', '.ScrollTodivLink', function (e) {
+        e.preventDefault();
+        var anchor = $(this).attr('data-go');
+        $(".ScrollTodivLink").removeClass("active");
+		$("body").removeClass("ActivePanel");
+        $(this).addClass("active");
+        $('html, body').animate({
+            scrollTop: $('#'+anchor).offset().top - 80
+        }, 500);
+    });
+	// ScrollTodivLink
 });

@@ -311,6 +311,7 @@ a {
   top: 0;
   z-index: 11;
   padding: 20px;
+  transition: 0.4s;
 }
 
 .Lp1,
@@ -330,18 +331,17 @@ body {
 .ActivePanel .SideNav {
   right: 0;
 }
-
-.ActivePanel .Lp1 {
-  transform: translate3d(-500px, 0, 0);
+.ActivePanel .lpheader ,
+.ActiveForm .lpheader{
+z-index: 9 !important;
 }
+
 
 .ActiveForm .SideForm {
   right: 0
 }
 
-.ActiveForm .Lp1 {
-  transform: translate3d(-500px, 0, 0);
-}
+
 
 .ActiveForm .menudrop1 {
   display: block;
