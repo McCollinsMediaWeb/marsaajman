@@ -59,8 +59,12 @@ a {
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 9;
+  z-index: 999999999 !important;
   color: #fff;
+}
+
+.fancybox-active .lpheader {
+  z-index: 9 !important;
 }
 
 .image-title {
@@ -77,7 +81,7 @@ a {
 }
 
 .T1 {
-  font-size: 50px;
+  font-size: 48px;
   font-weight: normal;
   font-style: normal;
   line-height: 1.2;
@@ -86,7 +90,7 @@ a {
 }
 
 .T2 {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .T3 {
@@ -216,11 +220,6 @@ a {
 
 .DropDownMenuIcon:hover .DropDownMenuIcon1 {
   background-color: #DF0044;
-}
-
-.DropDownMenuIcon:hover .DropDownMenuIcon2 {
-  background-color: #2C5697;
-  width: 100%;
 }
 
 .DropDownMenuIcon:hover .DropDownMenuIcon3 {
@@ -411,49 +410,58 @@ body {
 .bg-white {
   background-color: #fff;
 }
+
 .ModalContent .FormBox {
   padding: 0;
   backdrop-filter: none;
   border-radius: 0;
   background: transparent;
 }
-.ModalContent .SubmitBtn{
-  background-color: #DF0044 ;
+
+.ModalContent .SubmitBtn {
+  background-color: #DF0044;
   border: 2px solid #fff;
   max-width: 70%;
 }
-.ModalContent .T4{
+
+.ModalContent .T4 {
   color: #fff;
   font-size: 18px;
   margin-bottom: 20px;
 }
-.T6{
+
+.T6 {
   color: #2C5697;
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 400;
   line-height: 1.2;
   text-align: center;
   margin-bottom: 10px;
 }
-.T7{
+
+.T7 {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
 }
-.overflow-hidden{
+
+.overflow-hidden {
   overflow: hidden;
 }
-.GridRow{
+
+.GridRow {
   margin-top: 10px;
 }
-.GridBlockWrap{
+
+.GridBlockWrap {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
   margin-top: 30px;
 }
-.GridBlock{
+
+.GridBlock {
   width: 100%;
   height: 300px;
   background-size: cover;
@@ -469,7 +477,8 @@ body {
   align-items: center;
   justify-content: center;
 }
-.GridBlock::after{
+
+.GridBlock::after {
   content: "";
   position: absolute;
   background-color: transparent;
@@ -485,32 +494,40 @@ body {
   width: 100%;
   height: 100%;
 }
-.GridBlock:hover{
+
+.GridBlock:hover {
   transform: scale(1.05);
 }
-.GridBlock.GridBlock1{
+
+.GridBlock.GridBlock1 {
   background-image: url(../images/w1.jpg);
 }
-.GridBlock.GridBlock2{
+
+.GridBlock.GridBlock2 {
   background-image: url(../images/w2.jpg);
 }
-.GridBlock.GridBlock3{
+
+.GridBlock.GridBlock3 {
   background-image: url(../images/w3.jpg);
 }
-.GridBlock.GridBlock4{
+
+.GridBlock.GridBlock4 {
   background-image: url(../images/w4.jpg);
 }
-.TextContentBox{
+
+.TextContentBox {
   position: relative;
   z-index: 4;
 }
-.TcbT1{
+
+.TcbT1 {
   color: #fff;
   font-size: 25px;
   font-weight: 700;
   text-align: center;
 }
-.GridBtns{
+
+.GridBtns {
 
   margin: 0 -15px;
   flex-wrap: wrap;
@@ -518,10 +535,12 @@ body {
   margin-top: 10px;
   display: none;
 }
-.GridBlock:hover .GridBtns{
+
+.GridBlock:hover .GridBtns {
   display: flex;
 }
-.GridBtn{
+
+.GridBtn {
   padding: 10px;
   text-align: center;
   color: #fff;
@@ -529,10 +548,279 @@ body {
   max-width: 49%;
   border-radius: 20px;
   cursor: pointer;
+  border: 2px solid transparent;
 }
-.GridBtn.GridBtn1{
+
+.GridBtn.GridBtn1 {
   background-color: #2C5697;
 }
-.GridBtn.GridBtn2{
+
+.GridBtn.GridBtn2 {
   background-color: #DF0044;
+}
+
+.GridBtn:hover {
+  border: 2px solid #fff;
+}
+
+.bg-grey {
+  background-color: #F4F4F4;
+}
+
+.SliderWrap {
+  margin-top: 40px;
+}
+
+.ImageGrid a {
+  display: block;
+
+  overflow: hidden;
+  position: relative;
+  border-radius: 35px;
+}
+
+.ImageGrid a img {
+  width: 100%;
+  padding: 0px 5px;
+  border: 2px solid #fff;
+  transition: 0.4s;
+}
+
+.ImageGrid a img:hover {
+  transform: scale(1.05);
+}
+
+.fancybox-slide {
+  background-color: #2C5697;
+}
+
+.ViewBox:after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  background-image: linear-gradient(180deg, #000000 10%, rgba(0, 0, 0, 0.35) 100%);
+  opacity: 0.4;
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  filter: brightness(100%) contrast(100%) saturate(100%) blur(0px) hue-rotate(0deg);
+  z-index: 3;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ViewBoxContent {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 4;
+  width: 100%;
+  padding: 40px;
+  color: #fff;
+  font-size: 40px;
+}
+
+.PlayButon {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  border-radius: 50%;
+  margin-bottom: 60px;
+  background-color: transparent;
+  background-image: linear-gradient(180deg, #000000 10%, rgba(0, 0, 0, 0.35) 100%);
+  opacity: 0.7;
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  filter: brightness(100%) contrast(100%) saturate(100%) blur(0px) hue-rotate(0deg);
+  transition: 0.4s;
+}
+
+.PlayButon:hover {
+  background-color: #DF0044;
+  opacity: 1;
+  filter: none;
+  background-image: none;
+}
+
+.PlayButon::after {
+  content: "";
+  width: 26px;
+  height: 30px;
+  background-image: url(../images/play.png);
+  background-size: 100% 100%;
+  position: absolute;
+  top: 25px;
+  left: 28px;
+}
+
+.bg3 {
+  background-color: #AFBCDF;
+}
+
+.PlayText {
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+.T11 {
+  color: #2C5697;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+.lpfooter {
+  background-color: #2C5697;
+  color: #fff;
+}
+
+.DownloadButton {
+  padding: 15px;
+  text-align: center;
+  color: #fff !important;
+  display: block;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  background-color: #DF0044;
+  max-width: 220px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: -25px;
+}
+
+.DownloadButton:hover {
+  background-color: #2C5697;
+  border: 2px solid #fff;
+}
+
+.HideSection {
+  padding: 20px;
+  background-color: #fff;
+  position: relative;
+  z-index: 99999999 !important;
+  margin-top: -45px;
+}
+
+.WidgetBox {
+  margin-top: 40px;
+}
+
+.LogoLinkFooter {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.LogoLinkFooter img {
+  max-height: 100px;
+}
+
+.FtrTxt1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.FtrTxt2 {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.8;
+}
+
+.FtrTxt2>div {
+  margin-bottom: 10px;
+}
+
+.FtrTxt2 a {
+  color: #fff !important;
+}
+
+.IframeBox iframe {
+  height: 270px !important;
+  width: 100% !important;
+}
+
+.SubscribeForm {
+  margin: 15px 0px;
+}
+
+.SubscribeForm input {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.SubscribeForm input::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.SubscribeForm input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.SubscribeForm button {
+  padding: 9px;
+  border: 0px solid #e4e4e4;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  color: #2C5697;
+  border-radius: 30px;
+  min-width: 100px;
+  cursor: pointer;
+}
+
+.icon {
+  display: inline-block;
+  width: 23px;
+  height: 22px;
+  background-size: 100% 100%;
+}
+
+.icon.ticktock {
+  background-image: url(../images/ticktock.png);
+  width: 19px;
+  height: 22px;
+}
+
+.icon.instagram {
+  background-image: url(../images/instagram.png);
+  width: 23px;
+  height: 22px;
+}
+
+.icon.facebook {
+  background-image: url(../images/facebook.png);
+  width: 10px;
+  height: 22px;
+}
+
+.icon.linkedin {
+  background-image: url(../images/linkedin.png);
+  width: 22px;
+  height: 22px;
+}
+
+.icon.twitter {
+  background-image: url(../images/twitter.png);
+  width: 28px;
+  height: 21px;
+}
+.SocialMediaIcon{
+  display: inline-block;
+  padding: 10px;
 }

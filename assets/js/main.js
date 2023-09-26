@@ -88,5 +88,50 @@ $(function(){
 		  jQuery("body").removeClass("StickHeader");
 		}
 	  });
+
+	  $('.centerslider').slick({
+		centerMode: true,
+		centerPadding: '60px',
+		slidesToShow: 5,
+		autoplay: true,
+		autoplaySpeed: 2000,
+		infinite: true,
+		lazyLoad: 'ondemand',
+		responsive: [
+		  {
+			breakpoint: 768,
+			settings: {
+			  arrows: false,
+			  centerMode: true,
+			  centerPadding: '40px',
+			  slidesToShow: 3
+			}
+		  },
+		  {
+			breakpoint: 480,
+			settings: {
+			  arrows: false,
+			  centerMode: true,
+			  centerPadding: '40px',
+			  slidesToShow: 1
+			}
+		  }
+		]
+	  });
+
+	  if (jQuery(window).width() < 1000) {
+        jQuery(".ImageSwitcher")
+        .fadeOut(400, function() {
+          jQuery(this).attr('src',jQuery(this).attr('data-mobile'));
+        })
+        .fadeIn(400);
+    }
+    else {
+      jQuery(".ImageSwitcher")
+        .fadeOut(400, function() {
+          jQuery(this).attr('src',jQuery(this).attr('data-desktop'));
+        })
+        .fadeIn(400);
+    }
 	 
 });
