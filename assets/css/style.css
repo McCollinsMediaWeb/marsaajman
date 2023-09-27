@@ -332,7 +332,10 @@ body {
   right: 0;
 }
 .ActivePanel .lpheader ,
-.ActiveForm .lpheader{
+.ActiveForm .lpheader ,
+.ActivePanel .FooterMediaIcons,
+.ActiveForm .FooterMediaIcons ,
+.Popup1 .FooterMediaIcons  {
 z-index: 9 !important;
 }
 
