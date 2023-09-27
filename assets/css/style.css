@@ -862,7 +862,7 @@ z-index: 9 !important;
   width: 100%;
   left: 0;
   bottom: 0;
-  z-index: 99;
+  z-index: 5;
   background-color: #fff;
   box-shadow: 0 5px 25px rgba(0,0,0,.17);
   display: none;
@@ -1089,14 +1089,23 @@ z-index: 9 !important;
     width: 100%;
     left: 0;
     margin-left: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
   .Popup1 .Ttile1 {
     font-size: 18px;
   }
   .Popup1 .WhyChooseContent {
     font-size: 16px;
+    margin-top: 15px;
   }
   .lpfooter {
     margin-bottom: 60px;
+  }
+  .ModalContent .T4{
+    font-size: 16px;
+  }
+  .ModalContent .SubmitBtn {
+    max-width: 100%;
   }
 }
