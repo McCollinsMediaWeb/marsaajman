@@ -106,7 +106,7 @@ $(function(){
 			  arrows: false,
 			  centerMode: true,
 			  centerPadding: '40px',
-			  slidesToShow: 3
+			  slidesToShow: 4
 			}
 		  },
 		  {
@@ -115,7 +115,7 @@ $(function(){
 			  arrows: false,
 			  centerMode: true,
 			  centerPadding: '40px',
-			  slidesToShow: 1
+			  slidesToShow: 2
 			}
 		  }
 		]
@@ -146,5 +146,17 @@ $(function(){
             scrollTop: $('#'+anchor).offset().top - 80
         }, 500);
     });
-	// ScrollTodivLink
+	$(document).on('click', '.ServicePopTrigger', function (e) {
+        e.preventDefault();
+		$("body").addClass("Popup1");
+		$(".p2HeadText").text($(this).data("title"));
+		$(".p2mainContent").text($(this).data("descriptions"));
+    });
+	$(document).on('click', '.closeBtn3', function (e) {
+        e.preventDefault();
+		$("body").removeClass("Popup1");
+		$(".p2HeadText").text("Read More Content Looking Empty");
+    	$(".p2mainContent").text($(this).data("Please click on any Read More Button"));
+    });
+	// closeBtn3
 });
