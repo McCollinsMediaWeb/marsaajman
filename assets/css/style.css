@@ -1091,6 +1091,7 @@ z-index: 9 !important;
     margin-left: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    padding: 20px;
   }
   .Popup1 .Ttile1 {
     font-size: 18px;
