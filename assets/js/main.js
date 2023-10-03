@@ -90,6 +90,13 @@ $(function(){
 		  jQuery("body").removeClass("StickHeader");
 		}
 	  });
+	  $('[data-fancybox="portfolio1"]').fancybox({
+		baseClass: 'myFancyBox',
+		thumbs : {
+			autoStart : true,
+			axis      : 'x'
+		}
+	  });
 
 	  $('.centerslider').slick({
 		centerMode: true,

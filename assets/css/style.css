@@ -25,7 +25,7 @@ a {
   position: absolute;
   background-color: transparent;
   background-image: linear-gradient(180deg, #000000 10%, rgba(0, 0, 0, 0.35) 100%);
-  opacity: 0.6;
+  opacity: 0.2;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
   filter: brightness(100%) contrast(100%) saturate(100%) blur(0px) hue-rotate(0deg);
   z-index: 3;
@@ -238,7 +238,8 @@ a {
   margin: 15px 0px 10px 0px;
 }
 
-.FormElemnets input {
+.FormElemnets input,
+.FormElemnets select {
   padding: 10px 25px;
   border-radius: 30px;
   border: 1px solid #fff;
@@ -250,7 +251,10 @@ a {
   color: #fff;
   font-size: 14px;
 }
-
+.FormElemnets select option{
+  background-color: #DF0044;
+  color: #fff;
+}
 .FormElemnets input::placeholder {
   color: #fff;
   opacity: 1;
@@ -479,8 +483,24 @@ z-index: 9 !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-position: bottom;
+}
+.fancybox-thumbs {
+  top: auto;
+  width: auto;
+  bottom: 0;
+  left: 0;
+  right : 0;
+  height: 95px;
+  padding: 10px 10px 5px 10px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.3);
 }
 
+.fancybox-show-thumbs .fancybox-inner {
+  right: 0;
+  bottom: 95px;
+}
 .GridBlock::after {
   content: "";
   position: absolute;
@@ -503,19 +523,19 @@ z-index: 9 !important;
 }
 
 .GridBlock.GridBlock1 {
-  background-image: url(../images/w1.jpg);
+  background-image: url(../images/w11.jpg);
 }
 
 .GridBlock.GridBlock2 {
-  background-image: url(../images/w2.jpg);
+  background-image: url(../images/w22.jpg);
 }
 
 .GridBlock.GridBlock3 {
-  background-image: url(../images/w3.jpg);
+  background-image: url(../images/w33.jpg);
 }
 
 .GridBlock.GridBlock4 {
-  background-image: url(../images/w4.jpg);
+  background-image: url(../images/w44.jpg);
 }
 
 .TextContentBox {
@@ -980,7 +1000,8 @@ z-index: 9 !important;
     font-size: 13px;
     line-height: 1.3;
   }
-  .FormElemnets input {
+  .FormElemnets input ,
+  .FormElemnets select {
     padding: 8px 15px;
   }
   .FormElemnets {
