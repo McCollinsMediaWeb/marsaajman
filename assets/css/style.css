@@ -759,7 +759,7 @@ z-index: 9 !important;
 }
 
 .FtrTxt2>div {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .FtrTxt2 a {
@@ -767,7 +767,7 @@ z-index: 9 !important;
 }
 
 .IframeBox iframe {
-  height: 270px !important;
+  height: 290px !important;
   width: 100% !important;
 }
 
